@@ -23,8 +23,6 @@ models = ["stl", "obj", "fbx", "blend", "3ds"]
 
 
 def main():
-    print(files)
-
     mode = int(input("""Выберите режим сортировки:\n
     1 - Типы файлов\n
     2 - Расширения файлов\n
