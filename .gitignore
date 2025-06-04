@@ -1,3 +1,6 @@
 __pycache__/
 *.log
 *.exe
+*.spec
+dist/
+build/

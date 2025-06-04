@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 import shutil
+import os.path
 
 files = os.listdir(path='.')
 
@@ -38,7 +39,7 @@ def main():
     dir = "sorter/"
     current_file = os.path.basename(__file__)  # Например: "script.py"
     for file in files:
-            if "." in file and file != current_file:
+            if os.path.isfile(file) and file != current_file:
                 extension = file.split(".")[-1]
                 if mode==2:
                     target_dir = dir + "." + extension
@@ -77,4 +78,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    input()
+    input("Сортировка завершена. Нажмите любую клавишу для закрытия...")
